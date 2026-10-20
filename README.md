@@ -53,12 +53,12 @@ DeepSeek в максимально экономичном режиме, резу
 git clone git@github.com:galancev/dsh-auto-translate-ui.git
 cd dsh-auto-translate-ui
 npm install
-dsh plugin --profile desktop add link:(Get-Location).Path
+dsh plugin --profile desktop add "link:$((Get-Location).Path)"
 ```
 
-`link:` требует абсолютный путь к каталогу плагина — здесь его даёт
-`(Get-Location).Path`. Если плагин уже склонирован в другое место, подставьте
-свой путь вместо вывода `Get-Location`.
+`link:` требует абсолютный путь к каталогу плагина; подстановка
+`$((Get-Location).Path)` берёт текущий каталог. Если плагин лежит в другом
+месте, укажите его полный путь.
 
 Затем перезапустите DSH. Строка плагина появится в профиле
 (`~/.dsh/profiles/desktop/package.json` → `dsh.profile.bundles`) и в списке плагинов.
