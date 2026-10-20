@@ -1,0 +1,12 @@
+# Локальные артефакты исследования и стенда — не часть плагина.
+.reference/
+.verify/
+.npm-cache/
+node_modules/
+*.log
+
+# Настройки IDE и служебные файлы ОС.
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

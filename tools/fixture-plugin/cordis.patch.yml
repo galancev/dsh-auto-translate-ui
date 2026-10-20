@@ -1,0 +1,7 @@
+# Bundle patch layer for the verification fixture plugin.
+# `dsh plugin add` appends this package to the profile's dsh.profile.bundles after
+# pnpm succeeds, so the bundle layer is selected on every boot of that profile.
+# A single row mounts the package's own host half (same package = bundle + plugin).
+- insert:
+    - id: fixture-plugin
+      name: dsh-fixture-plugin

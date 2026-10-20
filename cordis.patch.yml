@@ -1,0 +1,9 @@
+# Bundle-патч профиля DSH: вставляет наш двуликий плагин (хост + клиент) в
+# композицию веб-профиля. Применяется как отдельный bundle-слой, когда пакет
+# установлен в профиль (пакет объявляет `dsh.bundle.patch`).
+#
+# Клиентская половина подключается автоматически из поля `dsh.client` в
+# package.json и раздаётся как /plugins/dsh-auto-translate-ui/client.js.
+- insert:
+    - id: auto-translate-ui
+      name: dsh-auto-translate-ui

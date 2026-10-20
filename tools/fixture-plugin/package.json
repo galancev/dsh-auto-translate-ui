@@ -1,0 +1,22 @@
+{
+  "name": "dsh-fixture-plugin",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Throwaway harness fixture: one host route plus one browser client module, installed and served exactly like a real DSH plugin bundle",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web"
+    }
+  }
+}
